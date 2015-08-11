@@ -1,0 +1,29 @@
+@import "bootstrap";
+@import "bootstrap/theme";
+
+p.door-name {
+  font-size: 24px;
+}
+
+.door-name-container {
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+p.door-status {
+  margin-right: -18px !important;
+}
+
+body {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.jumbotron {
+  margin-bottom: 0;
+  min-height: 170px;
+}
+
+.jumbotron > .container {
+  margin-top: 50px;
+}
