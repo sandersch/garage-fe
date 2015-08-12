@@ -1,7 +1,7 @@
 import App from '../app';
 import Ember from 'ember';
 
-App.DoorsController = Ember.ArrayController.extend({
+App.DoorsController = Ember.Controller.extend({
   thing: "asdf"
 });
 

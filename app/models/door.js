@@ -1,7 +1,7 @@
 import App from '../app';
 import DS from 'ember-data';
 
-App.Door = DS.Model.extend({
+export default App.Door = DS.Model.extend({
   status: DS.attr('string'),
 
   isOpen: function() {
@@ -12,5 +12,3 @@ App.Door = DS.Model.extend({
     }
   }.property('status')
 });
-
-export default App.Door;

@@ -6,7 +6,7 @@
           <p class="door-name">Door {{door.id}}</p>
         </div>
         <div class="col-md-4 col-xs-4 door-status-container">
-          <p class="door-status"><a {{bind-attr class=":btn :btn-block :disabled :door-status door.isOpen:btn-danger:btn-success"}} href="/" role="button">{{door.status}}</a></p>
+          <p class="door-status"><a class="btn btn-block disabled door-status {{if door.isOpen 'btn-danger' 'btn-success'}}" href="/" role="button">{{door.status}}</a></p>
         </div>
         <div class="col-md-4 col-xs-4 pull-right">
           <p class=""><a class="btn btn-warning move-button btn-block" href="/" role="button">Move</a></p>
