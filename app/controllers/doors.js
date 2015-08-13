@@ -1,7 +1,7 @@
 import App from '../app';
 import Ember from 'ember';
 
-App.DoorsController = Ember.Controller.extend({
+export default App.DoorsController = Ember.Controller.extend({
   init: function() {
     this._super();
     this.poll();
@@ -14,5 +14,3 @@ App.DoorsController = Ember.Controller.extend({
     }, 5000);
   }
 });
-
-export default App.DoorsController;
