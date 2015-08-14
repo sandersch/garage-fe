@@ -1,8 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  actions: {
+    move: function() {
+      console.log('move button pressed for ' + this.get('door.id'));
+      this.get('door').move();
+    }
+  },
+
   statusClass: function() {
-    status = this.get('door.status')
+    var status = this.get('door.status')
     if("open" == status) {
       return 'btn-danger';
     } else if("closed" == status) {

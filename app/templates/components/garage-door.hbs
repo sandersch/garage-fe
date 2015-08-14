@@ -7,7 +7,7 @@
       <p class="door-status"><a class="btn btn-block disabled door-status {{statusClass}}" href="/" role="button">{{door.status}}</a></p>
     </div>
     <div class="col-md-4 col-xs-4 pull-right">
-      <p class=""><a class="btn btn-warning move-button btn-block" href="/" role="button">Move</a></p>
+      <button {{action "move"}} class="btn btn-warning move-button btn-block" href="/" role="button">Move</button>
     </div>
   </div>
 </div>
