@@ -6,13 +6,26 @@ export default App.Door = DS.Model.extend({
 
   move: function() {
     console.log('moving door');
-    console.log(this);
-    console.log(this.get('path'));
-    var path = 'doors/%@'.fmt(this.get('id'));
-    console.log("path = " + path);
-    $.ajax(path, { method: 'PUT', data: "{\"position\": \"open\"}", dataType: 'json', contentType:"application/json; charset=utf-8" }).then(function(resp) {
+    //console.log(this);
+    //console.log(this.container);
+
+    this.put({ 
+      data: {"position": "open"},
+    }).then(function(resp) {
       console.log('door should be moving now');
       console.log(resp);
     });
+  },
+
+  _ajax: function(method, options) {
+    var type    = this.get('constructor');
+    var adapter = this.get('store').adapterFor(type);
+    var fullUrl = '%@/%@'.fmt(adapter.buildURL(type.typeKey), this.get('id'));
+
+    return adapter.ajax(fullUrl, method, options);
+  },
+
+  put: function(options) {
+    return this._ajax('PUT', options);
   }
 });
