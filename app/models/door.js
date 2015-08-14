@@ -6,15 +6,14 @@ export default App.Door = DS.Model.extend({
 
   move: function() {
     console.log('moving door');
-    //console.log(this);
-    //console.log(this.container);
-
-    this.put({ 
-      data: {"position": "open"},
-    }).then(function(resp) {
-      console.log('door should be moving now');
-      console.log(resp);
-    });
+    this.set('status', 'open');
+    this.save();
+    //this.put({ 
+      //data: {"position": "open"},
+    //}).then(function(resp) {
+      //console.log('door should be moving now');
+      //console.log(resp);
+    //});
   },
 
   _ajax: function(method, options) {
