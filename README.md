@@ -41,7 +41,9 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+One of the simplest deployment strategies possible. We are using rsync to upload assets and ssh to sync the index.html. The sinatra app powering the API treats the deployment directory for the ember app as its public directory.
+
+* `ember deploy -prod`
 
 ## Further Reading / Useful Links
 
