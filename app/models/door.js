@@ -16,7 +16,8 @@ export default App.Door = DS.Model.extend({
     } else if("closed" === status) {
       return 'open';
     } else {
-      return undefined;
+      // when it doubt close it out
+      return 'closed';
     }
   }.property('status')
 });
