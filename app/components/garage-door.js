@@ -3,8 +3,6 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   actions: {
     move: function() {
-      console.log('move button pressed for ' + this.get('door.id'));
-      console.log(this.get('door'));
       this.get('door').move();
     }
   },
